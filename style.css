@@ -10,7 +10,7 @@
 /* Corpo da página */
 body {
     font-family: "Roboto", serif;
-    background-color: #E3DCC9; /* Fundo neutro de pergaminho */
+    background-color: #000000; /* Fundo neutro de pergaminho */
 }
 
 /* Estilos do wrapper do cartão */
@@ -23,7 +23,7 @@ body {
 .card {
     width: 180px;
     height: 280px;
-    background-color: #FDF3E7; /* Fundo claro de pergaminho */
+    background-color: #ffffff; /* Fundo claro de pergaminho */
     border: 2px solid #9E2A2F; /* Borda vermelha da Grifinória */
     transform-style: preserve-3d;
     will-change: transform;
@@ -118,7 +118,7 @@ body {
 }
 
 .card-body p {
-    font-size: 12px;
+    font-size: 22px;
     font-weight: 300;
     color: #333; /* Cor escura para o texto */
 }
@@ -274,3 +274,57 @@ body {
 
 
 
+
+
+
+
+
+
+/* Coração */
+.heart-seal {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: crimson;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    z-index: 10;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Bolhas do coração */
+.heart-seal::before,
+.heart-seal::after {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: crimson;
+    border-radius: 50%;
+}
+
+.heart-seal::before {
+    top: -30px;
+    left: 0;
+}
+
+.heart-seal::after {
+    left: -30px;
+    top: 0;
+}
+
+/* Texto dentro do coração */
+.heart-seal span {
+    position: absolute;
+    transform: rotate(-45deg);
+    color: white;
+  
+    font-size: 10px;
+    font-weight: bold;
+    z-index: 2;
+    pointer-events: none;
+}
